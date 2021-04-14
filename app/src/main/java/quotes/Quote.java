@@ -3,7 +3,7 @@ package quotes;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Quotes {
+public class Quote {
     String author;
     String text;
 
@@ -23,11 +23,8 @@ public class Quotes {
         this.text = text;
     }
 
-    public Quotes(){
 
-    }
-
-    public Quotes(String author, String text) {
+    public Quote(String author, String text) {
         this.author = author;
         this.text = text;
     }
@@ -44,7 +41,7 @@ public class Quotes {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Quotes quotes = (Quotes) o;
+        Quote quotes = (Quote) o;
         return author.equals(quotes.author) && text.equals(quotes.text);
     }
 
