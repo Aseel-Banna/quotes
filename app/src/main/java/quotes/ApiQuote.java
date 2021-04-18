@@ -1,18 +1,30 @@
 package quotes;
 
 public class ApiQuote {
-    public String content;
+    String quoteText;
+    String quoteAuthor;
 
-    public ApiQuote(String text) {
-        this.content = text;
+    public String getQuoteText() {
+        return quoteText;
     }
 
-    public String getContent() {
-        return content;
+    public void setQuoteText(String quoteText) {
+        this.quoteText = quoteText;
     }
-    //    @Override
+
+    public String getQuoteAuthor() {
+        return quoteAuthor;
+    }
+
+    @Override
     public String toString() {
-        return String.format("Content: ", this.content);
+        return "ApiQuote{" +
+                "quoteText='" + quoteText + '\'' +
+                ", quoteAuthor='" + quoteAuthor + '\'' +
+                '}';
     }
 
+    public void setQuoteAuthor(String quoteAuthor) {
+        this.quoteAuthor = quoteAuthor;
+    }
 }
